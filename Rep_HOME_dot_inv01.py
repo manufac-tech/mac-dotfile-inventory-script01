@@ -4,7 +4,7 @@ import os
 from datetime import datetime
 
 # Define the source file paths
-template_path = "/Users/stevenbrown/Desktop/240722_DOT CONTROL GEN 2/Rep_HOME_dot_inventory_TEMPLATE.md"
+template_path = "/Users/stevenbrown/swd_storage/VCS_local/vcs3_GitHub/GitHub5_mine_private/macOS_util_py_rep_dot_inv01_240723/data/Rep_HOME_dot_inventory_TEMPLATE.md"
 
 # Function to check for blank lines or lines starting with a `#`
 def is_blank_or_comment(line):
@@ -76,7 +76,8 @@ def process_template(template_path, dot_items_dict):
     formatted_output = []
     unmatched_in_home = set(dot_items_dict.keys())
     matched_in_template = set()
-    
+    template_items = set()  # Create a set for template items
+
     with open(template_path, "r") as template_file:
         for line in template_file:
             stripped_line = line.strip()
@@ -85,32 +86,36 @@ def process_template(template_path, dot_items_dict):
                 continue
 
             item_name, comment, is_folder = extract_item_and_folder_status(stripped_line)
+            template_items.add(item_name)  # Add the item to the template_items set
 
             # Check if the item exists in the dot items dictionary
             if item_name in dot_items_dict:
                 matched_in_template.add(item_name)
                 unmatched_in_home.discard(item_name)
-                is_folder = dot_items_dict[item_name]  # dot_items_dict only contains folder status
-                formatted_line = compile_line(item_name, comment, is_folder)
-            else:
-                formatted_line = compile_line(item_name, comment, is_folder)
-
+                is_folder = dot_items_dict[item_name]  # Update only is_folder from dot_items_dict
+            formatted_line = compile_line(item_name, comment, is_folder)
             formatted_output.append(formatted_line)
-    
-    unmatched_in_template = set(dot_items_dict.keys()).difference(matched_in_template)
-    
-    return formatted_output, unmatched_in_home, unmatched_in_template
 
-def post_process_output(formatted_output, unmatched_in_home, unmatched_in_template):
-    if unmatched_in_home:
-        formatted_output.insert(0, "### Unmatched Items in Home Directory\n")
-        for item in sorted(unmatched_in_home):
-            formatted_output.insert(1, f"- {item}\n")
+    unmatched_in_template = template_items.difference(matched_in_template)  # Use template_items instead of template_dict
+
+    return formatted_output, unmatched_in_home, unmatched_in_template
     
+def post_process_output(formatted_output, unmatched_in_home, unmatched_in_template, dot_items_dict, template_dict):
+    # Add unmatched items in home to the beginning of the formatted output
+    if unmatched_in_home:
+        formatted_output.insert(0, "### $HOME dot items not found in Template")
+        for item in sorted(unmatched_in_home):
+            is_folder = dot_items_dict.get(item, False)
+            line = compile_line(item, "", is_folder)
+            formatted_output.insert(1, line)
+    
+    # Add unmatched items in template to the end of the formatted output
     if unmatched_in_template:
-        formatted_output.append("\n### Template Items Not Found in Home Directory\n")
+        formatted_output.append("### Template Items Not Found in $HOME")
         for item in sorted(unmatched_in_template):
-            formatted_output.append(f"- {item}\n")
+            comment, is_folder = template_dict.get(item, ("", False))
+            line = compile_line(item, comment, is_folder)
+            formatted_output.append(line)
     
     return formatted_output
 
@@ -132,25 +137,12 @@ def main():
     # Process the template
     formatted_output, unmatched_in_home, unmatched_in_template = process_template(template_path, dot_items)
     
-    # Add unmatched items in home to the beginning of the formatted output
-    unmatched_home_header = "### $HOME dot items not found in Template"
-    formatted_output.insert(0, unmatched_home_header)
-    for item in unmatched_in_home:
-        is_folder = dot_items.get(item, False)  # Ensure default value if item is missing
-        line = compile_line(item, "", is_folder)  # No comment since it's not in the template
-        formatted_output.insert(1, line)  # Insert after the header
-    
-    # Add unmatched items in template to the end of the formatted output
-    unmatched_template_header = "### Template Items Not Found in $HOME"
-    formatted_output.append(unmatched_template_header)
-    for item in unmatched_in_template:
-        comment, is_folder = template_dict.get(item, ("", False))  # Ensure default values if item is missing
-        line = compile_line(item, comment, is_folder)
-        formatted_output.append(line)
+    # Post-process the output to handle unmatched items
+    formatted_output = post_process_output(formatted_output, unmatched_in_home, unmatched_in_template, dot_items, template_dict)
     
     # Generate the output file name with current date and time
     output_file_name = datetime.now().strftime("%y%m%d-%H%M%S") + "_Rep_HOME_dot_inventory_TEST.md"
-    output_file_path = os.path.join("/Users/stevenbrown/Desktop/240722_DOT CONTROL GEN 2", output_file_name)
+    output_file_path = os.path.join("/Users/stevenbrown/swd_storage/VCS_local/vcs3_GitHub/GitHub5_mine_private/macOS_util_py_rep_dot_inv01_240723/zz_outputs", output_file_name)
     
     write_output_file(output_file_path, formatted_output)
 

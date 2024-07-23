@@ -1,3 +1,39 @@
+### $HOME dot items not found in Template
+- .zshrc_aliases
+
+- .zshrc240721-1603_omz1_bak1.zip
+
+- .zshrc240721-1600.zip
+
+- .zsh_history240721-1606.zip
+
+- .zsh_history.bak
+
+- .zcompdump-srb_mbp23-5.9.zwc
+
+- .zcompdump-srb_mbp23-5.9
+
+- .virtualenvs
+
+- **.shade (ƒ)**
+
+- 
+
+- **.local (ƒ)**
+
+- **.installbuilder (ƒ)**
+
+- **.gem (ƒ)**
+
+- 
+
+- **._dot_file_manual_storage (ƒ)**
+
+	
+
+- **.IdentityService (ƒ)**
+
+	
 ### Terminal
 
 #### Terminal: ZSH
@@ -12,6 +48,8 @@
 - .zshrc default, disabled
 - **.zsh_sessions | Command history and state from previous zsh sessions (ƒ)**
 - .zcompdump | zsh completion dump file
+- .test_file_name_in_template
+- **.test_folder | comments are here (ƒ)**
 
 #### Terminal: ZSH Frameworks & Plugins
 
@@ -130,3 +168,6 @@
 
 - **.omniboard | Omniboard project management tool (ƒ)**
 
+### Template Items Not Found in $HOME
+- .test_file_name_in_template
+- **.test_folder | comments are here (ƒ)**
