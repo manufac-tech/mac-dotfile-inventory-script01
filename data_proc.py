@@ -1,4 +1,4 @@
-import pandas as pd  # Importing the pandas package
+import pandas as pd
 
 def create_dataframe(dot_items, template_dict):
     """
@@ -46,10 +46,7 @@ def create_dataframe(dot_items, template_dict):
     # Create the DataFrame
     df = pd.DataFrame(data)
 
-    # Reset the index to generate unique IDs
-    df.reset_index(inplace=True)
-
-    # Rename the default index column to 'unique_id'
-    df.rename(columns={'index': 'unique_id'}, inplace=True)
+    # Group by all columns to create a unique ID for each group of rows
+    df['unique_id'] = df.groupby(list(df.columns)).ngroup()
 
     return df
