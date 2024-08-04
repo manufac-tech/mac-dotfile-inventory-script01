@@ -1,22 +1,12 @@
-# main.py
-
 import os
-from datetime import datetime
-from template_proc import (
-    read_template,
-    is_blank_or_comment,
-    extract_item_and_folder_status,
-    create_template_dict
-)
-from report_gen import process_template, compile_line, post_process_output, write_output_file
-from data_proc import create_dataframe  # Import the function to create the DataFrame
-
-# Define the source file paths
-template_path = "/Users/stevenbrown/swd_storage/VCS_local/vcs3_GitHub/GitHub5_mine_private/macOS_util_py_rep_dot_inv01_240723/data/Rep_HOME_dot_inventory_TEMPLATE.md"
+from report_gen import create_report_master
+from data_proc import create_dataframe
+from template_proc import create_template_dict_master
 
 # Function to create a dictionary from dot items in the home directory
-def create_dot_items_dictionary(home_dir_path):
+def create_dot_items_dictionary():
     dot_items = {}
+    home_dir_path = os.path.expanduser("~")  # Define the home directory path internally
     for item in os.listdir(home_dir_path):
         if item.startswith("."):
             item_path = os.path.join(home_dir_path, item)
@@ -25,51 +15,43 @@ def create_dot_items_dictionary(home_dir_path):
             # print(f"[create_dot_items_dictionary] Item: {item}, Is Folder: {is_folder}")
     return dot_items
 
+def find_duplicate_indices(df):
+    # Check for duplicate indices in the DataFrame
+    duplicates = df.index[df.index.duplicated()].unique()
+    
+    if len(duplicates) > 0:
+        print("Duplicate indices found:")
+        print(duplicates)
+        # Print the rows with duplicate indices
+        print("Rows with duplicate indices:")
+        print(df.loc[duplicates])
+    else:
+        print("All indices are unique.")
+
 def main():
-    # Read the template
-    template = read_template(template_path)
-
-    # Define the home directory path
-    home_dir_path = os.path.expanduser("~")
-    
     # Create the dictionary of dot items in the home directory
-    dot_items = create_dot_items_dictionary(home_dir_path)
-    
-    # Create the template dictionary
-    template_dict = create_template_dict(template_path)
-    
-    # Process each line in the template
-    for line in template:
-        if is_blank_or_comment(line):
-            continue
+    dot_items = create_dot_items_dictionary()
 
-        item_name, comment, is_folder = extract_item_and_folder_status(line)
-        # Logic to process each item (e.g., checking if it exists in dot_items)
-        # print(f"Processing item: {item_name}, Comment: {comment}, Is Folder: {is_folder}")
+    # Create the template dictionary using the master function
+    template_dict = create_template_dict_master()
 
-    # Process the template
-    formatted_output, unmatched_in_home, unmatched_in_template = process_template(template_path, dot_items)
-    
-    # Post-process the output to handle unmatched items
-    formatted_output = post_process_output(formatted_output, unmatched_in_home, unmatched_in_template, dot_items, template_dict)
-    
-    # Generate the output file name with current date and time
-    output_file_name = datetime.now().strftime("%y%m%d-%H%M%S") + "_Rep_HOME_dot_inventory.md"
-    output_file_path = os.path.join("/Users/stevenbrown/Library/Mobile Documents/com~apple~CloudDocs/Documents_SRB iCloud/Filespace control/FS Ctrl - LOGS/Info Reports + Logs IN", output_file_name)
-    
-    # Write the formatted output to the output file
-    write_output_file(output_file_path, formatted_output)
-    
     # Create the DataFrame using the new function
     df = create_dataframe(dot_items, template_dict)
-    
-    # # Display the DataFrame
-    # print("\nGenerated DataFrame:")
-    # print(df)
 
-    # # Export the DataFrame to a CSV file
-    # df.to_csv('dotfiles_report.csv', index=False)
-    # print("DataFrame exported to 'dotfiles_report.csv'")
+    # Set the DataFrame index to line_number for unique indexing
+    df.set_index('line_number', inplace=True)
+
+    # Check for duplicate indices
+    find_duplicate_indices(df)
+
+    # Debug: Print DataFrame information
+    print("\nGenerated DataFrame Info:")
+    print(df.info())
+    print("\nDataFrame Head:")
+    print(df.head())
+
+    # Call the master report generation function
+    create_report_master(template_dict, dot_items, df)
 
 if __name__ == "__main__":
     main()

@@ -1,4 +1,3 @@
-
 def read_template(file_path):
     """Read the template markdown file."""
     with open(file_path, 'r') as file:
@@ -8,8 +7,8 @@ def is_blank_or_comment(line):
     """Check if a line is blank or a comment."""
     return not line.strip() or line.strip().startswith('#')
 
-# Existing extract_item_and_folder_status function, updated to handle comment extraction correctly
 def extract_item_and_folder_status(line):
+    """Extract item name, comment, and folder status."""
     # Strip leading '- ' and space
     line = line[2:].strip()
     
@@ -29,49 +28,36 @@ def extract_item_and_folder_status(line):
 
     return item_name, comment, is_folder
 
-# Function to create a dictionary from the template markdown file
-def create_template_dict(template_path):
+def create_template_dict_master():
+    """Read the template and create a dictionary with detailed line information."""
+    # Define the template file path internally
+    template_path = "/Users/stevenbrown/swd_storage/VCS_local/vcs3_GitHub/GitHub5_mine_private/macOS_util_py_rep_dot_inv01_240723/data/Rep_HOME_dot_inventory_TEMPLATE.md"
+    
     template_dict = {}
-    with open(template_path, "r") as file:
-        for line in file:
-            stripped_line = line.strip()
-            if not stripped_line or stripped_line.startswith("#"):
-                continue
+    
+    # Read the template
+    lines = read_template(template_path)
+    
+    # Process each line with its line number
+    for line_number, line in enumerate(lines, start=1):
+        stripped_line = line.strip()
+        line_type = "data" if not is_blank_or_comment(line) else "formatting"
+        
+        # Initialize variables for non-comment lines
+        item_name = comment = ""
+        is_folder = False
 
+        # Process non-comment lines
+        if line_type == "data":
             item_name, comment, is_folder = extract_item_and_folder_status(stripped_line)
-            template_dict[item_name] = (comment, is_folder)
-
-    # Conditionally print the entry if the item name is '.gem'
-    for key, value in template_dict.items():
-        if key == ".gem":
-            print(f"[create_template_dict] Item: {key}, Comment: {value[0]}, Is Folder: {value[1]}")
+        
+        # Store detailed information in the dictionary
+        template_dict[line_number] = {
+            "line_content": stripped_line,
+            "item_name": item_name,
+            "comment": comment,
+            "is_folder": is_folder,
+            "line_type": line_type,
+        }
     
     return template_dict
-
-# def process_template(template_path, dot_items_dict):
-#     formatted_output = []
-#     unmatched_in_home = set(dot_items_dict.keys())
-#     matched_in_template = set()
-#     template_items = set()  # Create a set for template items
-
-#     with open(template_path, "r") as template_file:
-#         for line in template_file:
-#             stripped_line = line.strip()
-#             if is_blank_or_comment(stripped_line):
-#                 formatted_output.append(line.rstrip())
-#                 continue
-
-#             item_name, comment, is_folder = extract_item_and_folder_status(stripped_line)
-#             template_items.add(item_name)  # Add the item to the template_items set
-
-#             # Check if the item exists in the dot items dictionary
-#             if item_name in dot_items_dict:
-#                 matched_in_template.add(item_name)
-#                 unmatched_in_home.discard(item_name)
-#                 is_folder = dot_items_dict[item_name]  # Update only is_folder from dot_items_dict
-#             formatted_line = compile_line(item_name, comment, is_folder)
-#             formatted_output.append(formatted_line)
-
-#     unmatched_in_template = template_items.difference(matched_in_template)  # Use template_items instead of template_dict
-
-#     return formatted_output, unmatched_in_home, unmatched_in_template
