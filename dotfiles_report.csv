@@ -1,0 +1,76 @@
+fs_filename,fs_type,tp_filename,tp_type,tp_comment
+.quokka,Folder,.quokka,Folder,debugging tool for JavaScript & TypeScript
+.nuxtrc,File,.nuxtrc,File,Nuxt.js configuration file
+.vue-cli-ui,Folder,.vue-cli-ui,Folder,Vue.js CLI User Interface config
+.config,Folder,.config,Folder,
+.docker,Folder,.docker,Folder,Docker containerization platform
+.node-gyp,Folder,.node-gyp,Folder,Node.js native addon build tool
+.DS_Store,File,.DS_Store,File,
+.vuerc,File,.vuerc,File,Vue.js configuration file
+.thumbnails,Folder,.thumbnails,Folder,Thumbnail cache
+._dotfiles,Folder,._dotfiles,Folder,/Users/stevenbrown/.\_dotfiles/.\_dotfiles_srb_repo
+.oh-my-posh,Folder,.oh-my-posh,Folder,
+.yarnrc,File,.yarnrc,File,Yarn package manager
+.CFUserTextEncoding,File,.CFUserTextEncoding,File,macOS - stores the user’s preferred text encoding settings
+.zsh_history.bak,File,.zsh_history.bak,File,
+.hgignore_global,File,.hgignore_global,File,Global .hgignore file
+.zshrc_autocomplete1,File,.zshrc_autocomplete1,File,
+.vscode-react-native,Folder,.vscode-react-native,Folder,Visual Studio Code extension for React Native
+.netrc,File,.netrc,File,Unix file stores login & init info for connecting to remote systems
+.subversion,Folder,.subversion,Folder,Subversion configuration files
+.bashrc,File,.bashrc,File,
+.Xencelabs,Folder,.Xencelabs,Folder,Xencelabs dedicated controller config
+.zshrc,File,.zshrc,File,
+.sonar,Folder,.sonar,Folder,"SonarQube, a tool for continuous inspection of code quality"
+.adobe,Folder,.adobe,Folder,
+.streamlit,Folder,.streamlit,Folder,Python framework for creating interactive web apps
+.local,Folder,.local,Folder,
+.pylint.d,Folder,.pylint.d,Folder,Python linting tool
+.fontconfig,Folder,.fontconfig,Folder,Unix font configuration
+.zprofile,File,.zprofile,File,zsh profile file
+.nvm,Folder,.nvm,Folder,Node.js version manager
+.nuget,Folder,.nuget,Folder,.NET package manager
+.zsh_history,File,.zsh_history,File,
+.ipython,Folder,.ipython,Folder,Python interactive shell
+.iterm2_shell_integration.zsh,File,.iterm2_shell_integration.zsh,File,iTerm2 shell integration file
+.npmrc,File,.npmrc,File,Node.js package manager configuration file
+.matplotlib,Folder,.matplotlib,Folder,Python plotting library
+.lesshst,File,.lesshst,File,command history file for the Unix less text viewer command
+.IdentityService,Folder,.IdentityService,Folder,
+.zcompdump-srb_mbp23-5.9,File,,File,
+.android,Folder,.android,Folder,Android SDK
+.gitignore_global,File,.gitignore_global,File,Global .gitignore file
+.cups,Folder,.cups,Folder,Common Unix Printing System
+.bash_sessions,Folder,.bash_sessions,Folder,Command history and state from previous bash sessions
+.omniboard,Folder,.omniboard,Folder,Omniboard project management tool
+.ms_openjdk_config,File,.ms_openjdk_config,File,Microsoft OpenJDK configuration file
+.iterm2,Folder,.iterm2,Folder,iTerm2 configuration files
+.flowise,Folder,.flowise,Folder,LLM AI No-code coding tool
+.dropbox,Folder,.dropbox,Folder,
+.zcompdump-srb_mbp23-5.9.zwc,File,,File,
+.sh_history,File,.sh_history,File,Shell history file
+.ssh,Folder,.ssh,Folder,Unix SSH configuration files
+.dotnet,Folder,.dotnet,Folder,.NET SDK
+.degit,Folder,.degit,Folder,quickly scaffold projects by downloading/extracting a repo
+.zshrc_aliases,File,.zshrc_aliases,File,
+.Trash,Folder,.Trash,Folder,
+.zshrc_scripts,File,.zshrc_scripts,File,
+.gitflow_export,File,.gitflow_export,File,GitFlow configuration file
+.jupyter,Folder,.jupyter,Folder,Python interactive computing
+.zcompdump,File,.zcompdump,File,zsh completion dump file
+.zshrc_themes_omp,File,.zshrc_themes_omp,File,
+.npm,Folder,.npm,Folder,Node.js package manager
+.pyenv,Folder,.pyenv,Folder,Python version manager
+.mono,Folder,.mono,Folder,Mono runtime (cross-platform .NET)
+.vscode,Folder,.vscode,Folder,
+.gem,Folder,.gem,Folder,Ruby Gems (Ruby libraries and packages)
+.installbuilder,Folder,.installbuilder,Folder,dev tool for building cross-platform installers for dtop & server sw (🚫)
+.aspnet,Folder,.aspnet,Folder,ASP.NET Core
+.python_history,File,.python_history,File,
+.cache,Folder,.cache,Folder,
+.gitconfig,File,.gitconfig,File,Git configuration file
+.ms_eclipsetemurinjdk_config,File,.ms_eclipsetemurinjdk_config,File,Microsoft Eclipse Temurin JDK configuration file
+.bash_history,File,.bash_history,File,
+.viminfo,File,.viminfo,File,
+.zsh_sessions,Folder,.zsh_sessions,Folder,Command history and state from previous zsh sessions
+.pcloud,Folder,.pcloud,Folder,

@@ -1,7 +1,15 @@
+# main.py
+
 import os
 from datetime import datetime
-from template_proc import read_template, is_blank_or_comment, extract_item_and_folder_status, create_template_dict
-from report_gen import process_template, compile_line, post_process_output, write_output_file  
+from template_proc import (
+    read_template,
+    is_blank_or_comment,
+    extract_item_and_folder_status,
+    create_template_dict
+)
+from report_gen import process_template, compile_line, post_process_output, write_output_file
+from data_proc import create_dataframe  # Import the function to create the DataFrame
 
 # Define the source file paths
 template_path = "/Users/stevenbrown/swd_storage/VCS_local/vcs3_GitHub/GitHub5_mine_private/macOS_util_py_rep_dot_inv01_240723/data/Rep_HOME_dot_inventory_TEMPLATE.md"
@@ -16,7 +24,7 @@ def create_dot_items_dictionary(home_dir_path):
             dot_items[item] = is_folder
             # print(f"[create_dot_items_dictionary] Item: {item}, Is Folder: {is_folder}")
     return dot_items
-    
+
 def main():
     # Read the template
     template = read_template(template_path)
@@ -29,16 +37,6 @@ def main():
     
     # Create the template dictionary
     template_dict = create_template_dict(template_path)
-
-    # # Print the contents of dot_items
-    # print("\nDot Items Dictionary:")
-    # for key, value in dot_items.items():
-    #     print(f"{key}: {value}")
-
-    # # Print the contents of template_dict
-    # print("\nTemplate Dictionary:")
-    # for key, value in template_dict.items():
-    #     print(f"{key}: {value}")
     
     # Process each line in the template
     for line in template:
@@ -46,9 +44,8 @@ def main():
             continue
 
         item_name, comment, is_folder = extract_item_and_folder_status(line)
-        # if item_name:
-        #     # Logic to process each item (e.g., checking if it exists in dot_items)
-        #     print(f"Processing item: {item_name}, Comment: {comment}, Is Folder: {is_folder}")
+        # Logic to process each item (e.g., checking if it exists in dot_items)
+        # print(f"Processing item: {item_name}, Comment: {comment}, Is Folder: {is_folder}")
 
     # Process the template
     formatted_output, unmatched_in_home, unmatched_in_template = process_template(template_path, dot_items)
@@ -62,6 +59,17 @@ def main():
     
     # Write the formatted output to the output file
     write_output_file(output_file_path, formatted_output)
+    
+    # Create the DataFrame using the new function
+    df = create_dataframe(dot_items, template_dict)
+    
+    # # Display the DataFrame
+    # print("\nGenerated DataFrame:")
+    # print(df)
+
+    # # Export the DataFrame to a CSV file
+    # df.to_csv('dotfiles_report.csv', index=False)
+    # print("DataFrame exported to 'dotfiles_report.csv'")
 
 if __name__ == "__main__":
     main()

@@ -48,30 +48,30 @@ def create_template_dict(template_path):
     
     return template_dict
 
-def process_template(template_path, dot_items_dict):
-    formatted_output = []
-    unmatched_in_home = set(dot_items_dict.keys())
-    matched_in_template = set()
-    template_items = set()  # Create a set for template items
+# def process_template(template_path, dot_items_dict):
+#     formatted_output = []
+#     unmatched_in_home = set(dot_items_dict.keys())
+#     matched_in_template = set()
+#     template_items = set()  # Create a set for template items
 
-    with open(template_path, "r") as template_file:
-        for line in template_file:
-            stripped_line = line.strip()
-            if is_blank_or_comment(stripped_line):
-                formatted_output.append(line.rstrip())
-                continue
+#     with open(template_path, "r") as template_file:
+#         for line in template_file:
+#             stripped_line = line.strip()
+#             if is_blank_or_comment(stripped_line):
+#                 formatted_output.append(line.rstrip())
+#                 continue
 
-            item_name, comment, is_folder = extract_item_and_folder_status(stripped_line)
-            template_items.add(item_name)  # Add the item to the template_items set
+#             item_name, comment, is_folder = extract_item_and_folder_status(stripped_line)
+#             template_items.add(item_name)  # Add the item to the template_items set
 
-            # Check if the item exists in the dot items dictionary
-            if item_name in dot_items_dict:
-                matched_in_template.add(item_name)
-                unmatched_in_home.discard(item_name)
-                is_folder = dot_items_dict[item_name]  # Update only is_folder from dot_items_dict
-            formatted_line = compile_line(item_name, comment, is_folder)
-            formatted_output.append(formatted_line)
+#             # Check if the item exists in the dot items dictionary
+#             if item_name in dot_items_dict:
+#                 matched_in_template.add(item_name)
+#                 unmatched_in_home.discard(item_name)
+#                 is_folder = dot_items_dict[item_name]  # Update only is_folder from dot_items_dict
+#             formatted_line = compile_line(item_name, comment, is_folder)
+#             formatted_output.append(formatted_line)
 
-    unmatched_in_template = template_items.difference(matched_in_template)  # Use template_items instead of template_dict
+#     unmatched_in_template = template_items.difference(matched_in_template)  # Use template_items instead of template_dict
 
-    return formatted_output, unmatched_in_home, unmatched_in_template
+#     return formatted_output, unmatched_in_home, unmatched_in_template
