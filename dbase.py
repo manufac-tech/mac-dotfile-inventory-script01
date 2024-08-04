@@ -10,8 +10,10 @@ def create_dot_items_dataframe():
             is_folder = os.path.isdir(item_path)
             dot_items.append({"item": item, "is_folder": is_folder})
     
-    # Create the DataFrame and specify the data types correctly
+    # Create the DataFrame
     df = pd.DataFrame(dot_items)
-    df = df.astype({"item": "string", "is_folder": "bool"})
 
+    # Set the dtype for each column using astype
+    df = df.astype({"item": "string", "is_folder": "bool"})
+    
     return df
