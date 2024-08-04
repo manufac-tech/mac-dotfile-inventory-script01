@@ -44,11 +44,19 @@ def main():
     # Check for duplicate indices
     find_duplicate_indices(df)
 
-    # Debug: Print DataFrame information
-    print("\nGenerated DataFrame Info:")
-    print(df.info())
-    print("\nDataFrame Head:")
-    print(df.head())
+    # # Debug: Print DataFrame information
+    # print("\nGenerated DataFrame Info:")
+    # print(df.info())
+    # print("\nDataFrame Head:")
+    # print(df.head())
+
+    #     # Display the DataFrame
+    # print("\nGenerated DataFrame:")
+    # print(df)
+
+    # Export the DataFrame to a CSV file
+    df.to_csv('dotfiles_report.csv', index=False)
+    print("DataFrame exported to 'dotfiles_report.csv'")
 
     # Call the master report generation function
     create_report_master(template_dict, dot_items, df)

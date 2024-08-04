@@ -128,6 +128,8 @@ def write_output_file(output_path, formatted_output):
         for line in formatted_output:
             dest.write(line + "\n")
 
+import pandas as pd
+
 def create_report_master(template_dict, dot_items_dict, df):
     """
     Master function to generate reports from the template and database.
@@ -140,6 +142,10 @@ def create_report_master(template_dict, dot_items_dict, df):
     Returns:
         None
     """
+
+    # Set the unique_id column as the index
+    df.set_index('unique_id', inplace=True)
+
     # Generate Report A
     formatted_output_a, fs_items_no_match_template_a, template_items_no_match_fs_a = report_builder(template_dict, dot_items_dict)
     formatted_output_a = post_process_output(formatted_output_a, fs_items_no_match_template_a, template_items_no_match_fs_a, dot_items_dict, template_dict)
@@ -148,6 +154,6 @@ def create_report_master(template_dict, dot_items_dict, df):
 
     # Generate Report B
     formatted_output_b, fs_items_no_match_template_b, template_items_no_match_fs_b = report_builder_db(df)
-    formatted_output_b = post_process_output(formatted_output_b, fs_items_no_match_template_b, template_items_no_match_fs_b, df.set_index('tp_filename').to_dict(orient='index'), df.set_index('tp_filename').to_dict(orient='index'))
+    formatted_output_b = post_process_output(formatted_output_b, fs_items_no_match_template_b, template_items_no_match_fs_b, df.to_dict(orient='index'), df.to_dict(orient='index'))
     output_file_path_b = generate_output_filename("_db")  # Generate output file path for Report B
     write_output_file(output_file_path_b, formatted_output_b)  # Write Report B
