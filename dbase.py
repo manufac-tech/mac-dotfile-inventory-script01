@@ -4,16 +4,19 @@ import os
 def create_dot_items_dataframe():
     dot_items = []
     home_dir_path = os.path.expanduser("~")
+
     for item in os.listdir(home_dir_path):
         if item.startswith("."):
             item_path = os.path.join(home_dir_path, item)
             is_folder = os.path.isdir(item_path)
-            dot_items.append({"item": item, "is_folder": is_folder})
-    
-    # Create the DataFrame
-    df = pd.DataFrame(dot_items)
+            dot_items.append({"item": str(item), "is_folder": is_folder})  # Convert item to string here
 
-    # Set the dtype for each column using astype
-    df = df.astype({"item": "string", "is_folder": "bool"})
-    
+    # Print the list of dot items to verify the content
+    print("Dot Items List:", dot_items)
+
+    # Create the DataFrame with the correct data types
+    df = pd.DataFrame(dot_items, dtype={"item": str, "is_folder": bool})
+    df["item"] = df["item"].astype(str)
+    df["is_folder"] = df["is_folder"].astype(bool)
+
     return df
