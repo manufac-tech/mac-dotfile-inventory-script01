@@ -1,0 +1,28 @@
+### _$HOME Dot Items Not Found in Template_
+
+{% for item in fs_not_in_tp %}
+- {{ item.fs_item_name }}{% if item.fs_is_folder %} (ƒ){% endif %}
+{% endfor %}
+
+{% for item in csv_data %}
+{% if loop.first or item.tp_cat_1 != loop.previtem.tp_cat_1 %}
+
+### {{ item.tp_cat_1_name }}
+{% endif %}
+
+{% if loop.first or item.tp_cat_2 != loop.previtem.tp_cat_2 %}
+#### {{ item.tp_cat_1 }}: {{ item.tp_cat_2 }}
+{% endif %}
+
+{% if item.is_folder %}
+- **{{ item.item_name }}{% if item.tp_comment %} | {{ item.tp_comment.strip() }}{% endif %} (ƒ)**
+{% else %}
+- {{ item.item_name }}{% if item.tp_comment %} | {{ item.tp_comment.strip() }}{% endif %}
+{% endif %}
+{% endfor %}
+
+### _Template Items Not Found in $HOME_
+
+{% for item in tp_not_in_fs %}
+- {{ item.tp_item_name }}{% if item.tp_comment %} | {{ item.tp_comment.strip() }}{% endif %}{% if item.tp_is_folder %} (ƒ){% endif %}
+{% endfor %}

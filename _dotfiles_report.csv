@@ -1,76 +1,77 @@
-item,is_folder,unique_id
-.quokka,True,50
-.nuxtrc,False,42
-.vue-cli-ui,True,60
-.config,True,13
-.docker,True,16
-.node-gyp,True,38
-.DS_Store,False,1
-.vuerc,False,61
-.thumbnails,True,56
-._dotfiles,True,5
-.oh-my-posh,True,44
-.yarnrc,False,62
-.CFUserTextEncoding,False,0
-.zsh_history.bak,False,68
-.hgignore_global,False,25
-.zshrc_autocomplete1,False,72
-.vscode-react-native,True,59
-.netrc,False,37
-.subversion,True,55
-.bashrc,False,11
-.Xencelabs,True,4
-.zshrc,False,70
-.sonar,True,52
-.adobe,True,6
-.streamlit,True,54
-.local,True,32
-.pylint.d,True,48
-.fontconfig,True,20
-.zprofile,False,66
-.nvm,True,43
-.nuget,True,41
-.zsh_history,False,67
-.ipython,True,27
-.iterm2_shell_integration.zsh,False,29
-.npmrc,False,40
-.matplotlib,True,33
-.lesshst,False,31
-.IdentityService,True,2
-.zcompdump-srb_mbp23-5.9,False,64
-.android,True,7
-.gitignore_global,False,24
-.cups,True,14
-.bash_sessions,True,10
-.omniboard,True,45
-.ms_openjdk_config,False,36
-.iterm2,True,28
-.flowise,True,19
-.dropbox,True,18
-.zcompdump-srb_mbp23-5.9.zwc,False,65
-.sh_history,False,51
-.ssh,True,53
-.dotnet,True,17
-.degit,True,15
-.zshrc_aliases,False,71
-.Trash,True,3
-.zshrc_scripts,False,73
-.gitflow_export,False,23
-.jupyter,True,30
-.zcompdump,False,63
-.zshrc_themes_omp,False,74
-.npm,True,39
-.pyenv,True,47
-.mono,True,34
-.vscode,True,58
-.gem,True,21
-.installbuilder,True,26
-.aspnet,True,8
-.python_history,False,49
-.cache,True,12
-.gitconfig,False,22
-.ms_eclipsetemurinjdk_config,False,35
-.bash_history,False,9
-.viminfo,False,57
-.zsh_sessions,True,69
-.pcloud,True,46
+item_name,is_folder,fs_item_name,fs_is_folder,unique_id,tp_item_name,tp_is_folder,tp_cat_1,tp_cat_1_name,tp_cat_2,tp_comment,no_show,original_order
+._dotfiles,True,._dotfiles,True,9.0,._dotfiles,True,term,Terminal,dotfile mgmt,/Users/stevenbrown/._dotfiles/._dotfiles_srb_repo,False,0
+.zshrc,False,.zshrc,False,21.0,.zshrc,False,term,Terminal,zshrc,,False,1
+nan,False,nan,,,.ABCD_TEST123,False,term,Terminal,zshrc,,False,2
+.zsh_history,False,.zsh_history,False,31.0,.zsh_history,False,term,Terminal,zshrc,,False,3
+.zshrc_aliases,False,.zshrc_aliases,False,53.0,.zshrc_aliases,False,term,Terminal,zshrc,,False,4
+.zsh_history.bak,False,.zsh_history.bak,False,13.0,.zsh_history.bak,False,term,Terminal,zshrc,,False,5
+.zshrc_scripts,False,.zshrc_scripts,False,55.0,.zshrc_scripts,False,term,Terminal,zshrc,,False,6
+.zshrc_themes_omp,False,.zshrc_themes_omp,False,59.0,.zshrc_themes_omp,False,term,Terminal,zshrc,,False,7
+.zshrc_autocomplete1,False,.zshrc_autocomplete1,False,15.0,.zshrc_autocomplete1,False,term,Terminal,zshrc,,False,8
+.zprofile,False,.zprofile,False,28.0,.zprofile,False,term,Terminal,zsh other,zsh profile file,False,9
+.zcompdump-srb_mbp23-5.9,False,.zcompdump-srb_mbp23-5.9,False,38.0,.zcompdump-srb_mbp23-5.9,False,term,Terminal,zsh other,zsh completion dump file,False,10
+.zsh_sessions,True,.zsh_sessions,True,73.0,.zsh_sessions,True,term,Terminal,zsh other,Command history and state from previous zsh sessions,False,11
+.zcompdump,False,.zcompdump,False,58.0,.zcompdump,False,term,Terminal,zsh other,,False,12
+.zcompdump-srb_mbp23-5.9.zwc,False,.zcompdump-srb_mbp23-5.9.zwc,False,48.0,.zcompdump-srb_mbp23-5.9.zwc,False,term,Terminal,zsh other,,False,13
+.oh-my-posh,True,.oh-my-posh,True,10.0,.oh-my-posh,True,term,Terminal,zsh themes,,False,14
+.bashrc,False,.bashrc,False,19.0,.bashrc,False,term,Terminal,bash,,False,15
+.bash_history,False,.bash_history,False,71.0,.bash_history,False,term,Terminal,bash,,False,16
+.bash_sessions,True,.bash_sessions,True,42.0,.bash_sessions,True,term,Terminal,bash,Command history and state from previous bash sessions,False,17
+.sh_history,False,.sh_history,False,49.0,.sh_history,False,term,Terminal,bash,Shell history file,False,18
+.iterm2_shell_integration.zsh,False,.iterm2_shell_integration.zsh,False,33.0,.iterm2_shell_integration.zsh,False,term,Terminal,other,iTerm2 shell integration file,False,19
+.iterm2,True,.iterm2,True,45.0,.iterm2,True,term,Terminal,other,iTerm2 configuration files,False,20
+.viminfo,False,.viminfo,False,72.0,.viminfo,False,term,Terminal,other,,False,21
+.npm,True,.npm,True,60.0,.npm,True,swd,Software Development,package managers plus,Node.js package manager,False,22
+.npmrc,False,.npmrc,False,34.0,.npmrc,False,swd,Software Development,package managers plus,Node.js package manager configuration file,False,23
+.nvm,True,.nvm,True,29.0,.nvm,True,swd,Software Development,package managers plus,Node.js version manager,False,24
+.yarnrc,False,.yarnrc,False,11.0,.yarnrc,False,swd,Software Development,package managers plus,Yarn package manager,False,25
+.node-gyp,True,.node-gyp,True,5.0,.node-gyp,True,swd,Software Development,package managers plus,Node.js native addon build tool,False,26
+.docker,True,.docker,True,4.0,.docker,True,swd,Software Development,package managers plus,Docker containerization platform,False,27
+.gem,True,.gem,True,64.0,.gem,True,swd,Software Development,package managers plus,Ruby Gems (Ruby libraries and packages),False,28
+.vuerc,False,.vuerc,False,7.0,.vuerc,False,swd,Software Development,frameworks,Vue.js configuration file,False,29
+.vue-cli-ui,True,.vue-cli-ui,True,2.0,.vue-cli-ui,True,swd,Software Development,frameworks,Vue.js CLI User Interface config,False,30
+.nuxtrc,False,.nuxtrc,False,1.0,.nuxtrc,False,swd,Software Development,frameworks,Nuxt.js configuration file,False,31
+.python_history,False,.python_history,False,67.0,.python_history,False,swd,Software Development,python,,False,32
+.pyenv,True,.pyenv,True,61.0,.pyenv,True,swd,Software Development,python,Python version manager,False,33
+.ipython,True,.ipython,True,32.0,.ipython,True,swd,Software Development,python,Python interactive shell,False,34
+.pylint.d,True,.pylint.d,True,26.0,.pylint.d,True,swd,Software Development,python,Python linting tool,False,35
+.matplotlib,True,.matplotlib,True,35.0,.matplotlib,True,swd,Software Development,python,Python plotting library,False,36
+.streamlit,True,.streamlit,True,24.0,.streamlit,True,swd,Software Development,python,Python framework for creating interactive web apps,False,37
+.jupyter,True,.jupyter,True,57.0,.jupyter,True,swd,Software Development,python,Python interactive computing,False,38
+.vscode,True,.vscode,True,63.0,.vscode,True,swd,Software Development,microsoft,,False,39
+.vscode-react-native,True,.vscode-react-native,True,16.0,.vscode-react-native,True,swd,Software Development,microsoft,Visual Studio Code extension for React Native,False,40
+.dotnet,True,.dotnet,True,51.0,.dotnet,True,swd,Software Development,microsoft,.NET SDK,False,41
+.nuget,True,.nuget,True,30.0,.nuget,True,swd,Software Development,microsoft,.NET package manager,False,42
+.mono,True,.mono,True,62.0,.mono,True,swd,Software Development,microsoft,Mono runtime (cross-platform .NET),False,43
+.aspnet,True,.aspnet,True,66.0,.aspnet,True,swd,Software Development,microsoft,ASP.NET Core,False,44
+.ms_eclipsetemurinjdk_config,False,.ms_eclipsetemurinjdk_config,False,70.0,.ms_eclipsetemurinjdk_config,False,swd,Software Development,microsoft,Microsoft Eclipse Temurin JDK configuration file,False,45
+.ms_openjdk_config,False,.ms_openjdk_config,False,44.0,.ms_openjdk_config,False,swd,Software Development,microsoft,Microsoft OpenJDK configuration file,False,46
+.quokka,True,.quokka,True,0.0,.quokka,True,swd,Software Development,other,debugging tool for JavaScript & TypeScript,False,47
+.sonar,True,.sonar,True,22.0,.sonar,True,swd,Software Development,other,"SonarQube, a tool for continuous inspection of code quality",False,48
+.flowise,True,.flowise,True,46.0,.flowise,True,swd,Software Development,other,LLM AI No-code coding tool,False,49
+.installbuilder,True,.installbuilder,True,65.0,.installbuilder,True,swd,Software Development,other,dev tool for building cross-platform installers for dtop & server sw (🚫),False,50
+.android,True,.android,True,39.0,.android,True,swd,Software Development,other,Android SDK,False,51
+.degit,True,.degit,True,52.0,.degit,True,swd,Software Development,other,quickly scaffold projects by downloading/extracting a repo,False,52
+.gitignore_global,False,.gitignore_global,False,40.0,.gitignore_global,False,swd,Software Development,vcs git,Global .gitignore file,False,53
+.gitflow_export,False,.gitflow_export,False,56.0,.gitflow_export,False,swd,Software Development,vcs git,GitFlow configuration file,False,54
+.gitconfig,False,.gitconfig,False,69.0,.gitconfig,False,swd,Software Development,vcs git,Git configuration file,False,55
+.hgignore_global,False,.hgignore_global,False,14.0,.hgignore_global,False,swd,Software Development,vcs other,Global .hgignore file,False,56
+.subversion,True,.subversion,True,18.0,.subversion,True,swd,Software Development,vcs other,Subversion configuration files,False,57
+.config,True,.config,True,3.0,.config,True,sys,System,general,,False,58
+.cache,True,.cache,True,68.0,.cache,True,sys,System,general,,False,59
+.local,True,.local,True,25.0,.local,True,sys,System,general,,False,60
+.IdentityService,True,.IdentityService,True,37.0,.IdentityService,True,sys,System,macos,,False,61
+.DS_Store,False,.DS_Store,False,6.0,.DS_Store,False,sys,System,macos,,True,62
+.Trash,True,.Trash,True,54.0,.Trash,True,sys,System,macos,,False,63
+.CFUserTextEncoding,False,.CFUserTextEncoding,False,12.0,.CFUserTextEncoding,False,sys,System,macos,macOS - stores the user’s preferred text encoding settings,False,64
+.netrc,False,.netrc,False,17.0,.netrc,False,sys,System,unix,Unix file stores login & init info for connecting to remote systems,False,65
+.thumbnails,True,.thumbnails,True,8.0,.thumbnails,True,sys,System,unix,Thumbnail cache,False,66
+.ssh,True,.ssh,True,50.0,.ssh,True,sys,System,unix,Unix SSH configuration files,False,67
+.fontconfig,True,.fontconfig,True,27.0,.fontconfig,True,sys,System,unix,Unix font configuration,False,68
+.lesshst,False,.lesshst,False,36.0,.lesshst,False,sys,System,unix,command history file for the Unix less text viewer command,False,69
+.cups,True,.cups,True,41.0,.cups,True,sys,System,unix,Common Unix Printing System,False,70
+.Xencelabs,True,.Xencelabs,True,20.0,.Xencelabs,True,apps,Applications,regular,Xencelabs dedicated controller config,False,71
+.adobe,True,.adobe,True,23.0,.adobe,True,apps,Applications,regular,,False,72
+.dropbox,True,.dropbox,True,47.0,.dropbox,True,apps,Applications,cloud,,False,73
+.pcloud,True,.pcloud,True,74.0,.pcloud,True,apps,Applications,cloud,,False,74
+.omniboard,True,.omniboard,True,43.0,.omniboard,True,oth,Other,projects,Omniboard project management tool,False,75

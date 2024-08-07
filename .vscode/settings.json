@@ -1,9 +1,9 @@
 {
   "files.exclude": {
     ".gitattributes": true,
-    ".gitignore": true,
-    "zz archive": true,
     "zz_outputs": true,
-    "zz 240803-2258 py out": true
+    "zz 240803-2258 py out": true,
+    "venv": true,
+    ".gitignore": true
   }
 }
