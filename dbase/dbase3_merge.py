@@ -35,6 +35,16 @@ def resolve_folder_conflict(row):
 def merge_dataframes(dot_items_df, template_df):
     """Merge the dot items DataFrame with the template DataFrame."""
     
+    # Print the dot_items_df DataFrame
+    print("Dot Items DataFrame (Pre-Merge):\n", dot_items_df.head())
+    print("\nDot Items DataFrame Info (Pre-Merge):\n")
+    print(dot_items_df.info())
+
+    # Print the template_df DataFrame
+    print("Template DataFrame (Pre-Merge):\n", template_df.head())
+    print("\nTemplate DataFrame Info (Pre-Merge):\n")
+    print(template_df.info())
+
     # Merge the DataFrames with an indicator
     merged_df = pd.merge(
         dot_items_df, template_df,
@@ -46,11 +56,11 @@ def merge_dataframes(dot_items_df, template_df):
     )
 
     # Print the Merged DataFrame (Initial)
-    # print("Merged DataFrame (Initial):\n", merged_df.head())
+    print("Merged DataFrame (Initial):\n", merged_df.head())
 
     # Testing: Check for initial data types and missing values
-    # print("\nData types after initial merge:\n", merged_df.dtypes)
-    # print("\nMissing values after initial merge:\n", merged_df.isnull().sum())
+    print("\nData types after initial merge:\n", merged_df.dtypes)
+    print("\nMissing values after initial merge:\n", merged_df.isnull().sum())
 
     # Ensure fs_item_name and tp_item_name are strings
     merged_df['fs_item_name'] = merged_df['fs_item_name'].astype(str)
@@ -61,10 +71,6 @@ def merge_dataframes(dot_items_df, template_df):
 
     # Ensure item_name is properly populated
     print("\nFinal item_name values:\n", merged_df['item_name'].head())
-
-    # Testing: Check for data types and missing values after name conflict resolution
-    # print("\nData types after name conflict resolution:\n", merged_df.dtypes)
-    # print("\nMissing values after name conflict resolution:\n", merged_df.isnull().sum())
 
     # Apply folder conflict resolution
     merged_df['is_folder'] = merged_df.apply(resolve_folder_conflict, axis=1)
