@@ -12,7 +12,7 @@
 
 - .zshrc
 
-- nan
+- .ABCD_TEST123
 
 - .zsh_history
 
@@ -181,6 +181,8 @@
 
 - **.IdentityService (ƒ)**
 
+
+- .DS_Store
 
 - **.Trash (ƒ)**
 

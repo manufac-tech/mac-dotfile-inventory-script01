@@ -1,0 +1,6 @@
+fs_item_name,fs_is_folder,unique_id,no_show_fs,tp_item_name,tp_is_folder,tp_cat_1,tp_cat_1_name,tp_comment,tp_cat_2,no_show_tp,original_order,_merge
+NaN,NaN,NaN,NaN,.ABCD_TEST123,False,term,Terminal,zshrc,,False,2,right_only
+.CFUserTextEncoding,False,12.0,False,.CFUserTextEncoding,False,sys,System,"macOS - stores the user’s preferred text encoding...",macos,False,64,both
+.DS_Store,False,6.0,False,.DS_Store,False,sys,System,,macos,False,62,both
+.IdentityService,True,37.0,False,.IdentityService,True,sys,System,,macos,False,61,both
+.Trash,True,54.0,False,.Trash,True,sys,System,,macos,False,63,both

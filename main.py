@@ -1,4 +1,4 @@
-from dbase_setup import setup_database
+from dbase.dbase2_setup import setup_database
 from report_gen import export_dataframe_to_csv, export_to_markdown
 
 def main():
