@@ -35,19 +35,22 @@ def merge_dataframes(dot_items_df, template_df):
     # Apply folder conflict resolution
     merged_df['is_folder'] = merged_df.apply(resolve_folder_conflict, axis=1)
 
-    # Handle NaN values for fs_ and tp_ fields
-    merged_df = replace_nan_values(merged_df)
-
     # Combine 'unique_id' fields
     merged_df['unique_id'] = merged_df['fs_unique_id'].combine_first(merged_df['tp_unique_id'])
 
     # Drop unnecessary columns
-    merged_df.drop(['fs_is_folder', 'tp_is_folder', 'fs_unique_id', 'tp_unique_id'], axis=1, inplace=True)
+    merged_df.drop(['fs_unique_id', 'tp_unique_id'], axis=1, inplace=True)
 
-    # Reorder columns
+    # Handle NaN values for fs_ and tp_ fields
+    merged_df = replace_nan_values(merged_df)
+
+    # Reorder columns based on the updated table
     columns_order = [
-        'item_name', 'is_folder', 'unique_id', 'fs_item_name', 'tp_item_name', 
-        'tp_cat_1', 'tp_cat_1_name', 'tp_cat_2', 'tp_comment', 'no_show', 'original_order'
+        'item_name', 'is_folder', 
+        'fs_item_name', 'fs_is_folder', 'unique_id', 
+        'tp_item_name', 'tp_is_folder', 'tp_cat_1', 
+        'tp_cat_1_name', 'tp_comment', 'tp_cat_2', 
+        'no_show', 'original_order'
     ]
     merged_df = reorder_columns(merged_df, columns_order)
 

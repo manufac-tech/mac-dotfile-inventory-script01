@@ -1,77 +1,77 @@
-item_name,is_folder,fs_item_name,tp_item_name,tp_cat_1,tp_cat_1_name,tp_cat_2,tp_comment,no_show,original_order
-._dotfiles,True,._dotfiles,._dotfiles,term,Terminal,dotfile mgmt,/Users/stevenbrown/._dotfiles/._dotfiles_srb_repo,False,0
-.zshrc,False,.zshrc,.zshrc,term,Terminal,zshrc,,False,1
-.ABCD_TEST123,False,nan,.ABCD_TEST123,term,Terminal,zshrc,,False,2
-.zsh_history,False,.zsh_history,.zsh_history,term,Terminal,zshrc,,False,3
-.zshrc_aliases,False,.zshrc_aliases,.zshrc_aliases,term,Terminal,zshrc,,False,4
-.zsh_history.bak,False,.zsh_history.bak,.zsh_history.bak,term,Terminal,zshrc,,False,5
-.zshrc_scripts,False,.zshrc_scripts,.zshrc_scripts,term,Terminal,zshrc,,False,6
-.zshrc_themes_omp,False,.zshrc_themes_omp,.zshrc_themes_omp,term,Terminal,zshrc,,False,7
-.zshrc_autocomplete1,False,.zshrc_autocomplete1,.zshrc_autocomplete1,term,Terminal,zshrc,,False,8
-.zprofile,False,.zprofile,.zprofile,term,Terminal,zsh other,zsh profile file,False,9
-.zcompdump-srb_mbp23-5.9,False,.zcompdump-srb_mbp23-5.9,.zcompdump-srb_mbp23-5.9,term,Terminal,zsh other,zsh completion dump file,False,10
-.zsh_sessions,True,.zsh_sessions,.zsh_sessions,term,Terminal,zsh other,Command history and state from previous zsh sessions,False,11
-.zcompdump,False,.zcompdump,.zcompdump,term,Terminal,zsh other,,False,12
-.zcompdump-srb_mbp23-5.9.zwc,False,.zcompdump-srb_mbp23-5.9.zwc,.zcompdump-srb_mbp23-5.9.zwc,term,Terminal,zsh other,,False,13
-.oh-my-posh,True,.oh-my-posh,.oh-my-posh,term,Terminal,zsh themes,,False,14
-.bashrc,False,.bashrc,.bashrc,term,Terminal,bash,,False,15
-.bash_history,False,.bash_history,.bash_history,term,Terminal,bash,,False,16
-.bash_sessions,True,.bash_sessions,.bash_sessions,term,Terminal,bash,Command history and state from previous bash sessions,False,17
-.sh_history,False,.sh_history,.sh_history,term,Terminal,bash,Shell history file,False,18
-.iterm2_shell_integration.zsh,False,.iterm2_shell_integration.zsh,.iterm2_shell_integration.zsh,term,Terminal,other,iTerm2 shell integration file,False,19
-.iterm2,True,.iterm2,.iterm2,term,Terminal,other,iTerm2 configuration files,False,20
-.viminfo,False,.viminfo,.viminfo,term,Terminal,other,,False,21
-.npm,True,.npm,.npm,swd,Software Development,package managers plus,Node.js package manager,False,22
-.npmrc,False,.npmrc,.npmrc,swd,Software Development,package managers plus,Node.js package manager configuration file,False,23
-.nvm,True,.nvm,.nvm,swd,Software Development,package managers plus,Node.js version manager,False,24
-.yarnrc,False,.yarnrc,.yarnrc,swd,Software Development,package managers plus,Yarn package manager,False,25
-.node-gyp,True,.node-gyp,.node-gyp,swd,Software Development,package managers plus,Node.js native addon build tool,False,26
-.docker,True,.docker,.docker,swd,Software Development,package managers plus,Docker containerization platform,False,27
-.gem,True,.gem,.gem,swd,Software Development,package managers plus,Ruby Gems (Ruby libraries and packages),False,28
-.vuerc,False,.vuerc,.vuerc,swd,Software Development,frameworks,Vue.js configuration file,False,29
-.vue-cli-ui,True,.vue-cli-ui,.vue-cli-ui,swd,Software Development,frameworks,Vue.js CLI User Interface config,False,30
-.nuxtrc,False,.nuxtrc,.nuxtrc,swd,Software Development,frameworks,Nuxt.js configuration file,False,31
-.python_history,False,.python_history,.python_history,swd,Software Development,python,,False,32
-.pyenv,True,.pyenv,.pyenv,swd,Software Development,python,Python version manager,False,33
-.ipython,True,.ipython,.ipython,swd,Software Development,python,Python interactive shell,False,34
-.pylint.d,True,.pylint.d,.pylint.d,swd,Software Development,python,Python linting tool,False,35
-.matplotlib,True,.matplotlib,.matplotlib,swd,Software Development,python,Python plotting library,False,36
-.streamlit,True,.streamlit,.streamlit,swd,Software Development,python,Python framework for creating interactive web apps,False,37
-.jupyter,True,.jupyter,.jupyter,swd,Software Development,python,Python interactive computing,False,38
-.vscode,True,.vscode,.vscode,swd,Software Development,microsoft,,False,39
-.vscode-react-native,True,.vscode-react-native,.vscode-react-native,swd,Software Development,microsoft,Visual Studio Code extension for React Native,False,40
-.dotnet,True,.dotnet,.dotnet,swd,Software Development,microsoft,.NET SDK,False,41
-.nuget,True,.nuget,.nuget,swd,Software Development,microsoft,.NET package manager,False,42
-.mono,True,.mono,.mono,swd,Software Development,microsoft,Mono runtime (cross-platform .NET),False,43
-.aspnet,True,.aspnet,.aspnet,swd,Software Development,microsoft,ASP.NET Core,False,44
-.ms_eclipsetemurinjdk_config,False,.ms_eclipsetemurinjdk_config,.ms_eclipsetemurinjdk_config,swd,Software Development,microsoft,Microsoft Eclipse Temurin JDK configuration file,False,45
-.ms_openjdk_config,False,.ms_openjdk_config,.ms_openjdk_config,swd,Software Development,microsoft,Microsoft OpenJDK configuration file,False,46
-.quokka,True,.quokka,.quokka,swd,Software Development,other,debugging tool for JavaScript & TypeScript,False,47
-.sonar,True,.sonar,.sonar,swd,Software Development,other,"SonarQube, a tool for continuous inspection of code quality",False,48
-.flowise,True,.flowise,.flowise,swd,Software Development,other,LLM AI No-code coding tool,False,49
-.installbuilder,True,.installbuilder,.installbuilder,swd,Software Development,other,dev tool for building cross-platform installers for dtop & server sw (🚫),False,50
-.android,True,.android,.android,swd,Software Development,other,Android SDK,False,51
-.degit,True,.degit,.degit,swd,Software Development,other,quickly scaffold projects by downloading/extracting a repo,False,52
-.gitignore_global,False,.gitignore_global,.gitignore_global,swd,Software Development,vcs git,Global .gitignore file,False,53
-.gitflow_export,False,.gitflow_export,.gitflow_export,swd,Software Development,vcs git,GitFlow configuration file,False,54
-.gitconfig,False,.gitconfig,.gitconfig,swd,Software Development,vcs git,Git configuration file,False,55
-.hgignore_global,False,.hgignore_global,.hgignore_global,swd,Software Development,vcs other,Global .hgignore file,False,56
-.subversion,True,.subversion,.subversion,swd,Software Development,vcs other,Subversion configuration files,False,57
-.config,True,.config,.config,sys,System,general,,False,58
-.cache,True,.cache,.cache,sys,System,general,,False,59
-.local,True,.local,.local,sys,System,general,,False,60
-.IdentityService,True,.IdentityService,.IdentityService,sys,System,macos,,False,61
-.DS_Store,False,.DS_Store,.DS_Store,sys,System,macos,,False,62
-.Trash,True,.Trash,.Trash,sys,System,macos,,False,63
-.CFUserTextEncoding,False,.CFUserTextEncoding,.CFUserTextEncoding,sys,System,macos,macOS - stores the user’s preferred text encoding settings,False,64
-.netrc,False,.netrc,.netrc,sys,System,unix,Unix file stores login & init info for connecting to remote systems,False,65
-.thumbnails,True,.thumbnails,.thumbnails,sys,System,unix,Thumbnail cache,False,66
-.ssh,True,.ssh,.ssh,sys,System,unix,Unix SSH configuration files,False,67
-.fontconfig,True,.fontconfig,.fontconfig,sys,System,unix,Unix font configuration,False,68
-.lesshst,False,.lesshst,.lesshst,sys,System,unix,command history file for the Unix less text viewer command,False,69
-.cups,True,.cups,.cups,sys,System,unix,Common Unix Printing System,False,70
-.Xencelabs,True,.Xencelabs,.Xencelabs,apps,Applications,regular,Xencelabs dedicated controller config,False,71
-.adobe,True,.adobe,.adobe,apps,Applications,regular,,False,72
-.dropbox,True,.dropbox,.dropbox,apps,Applications,cloud,,False,73
-.pcloud,True,.pcloud,.pcloud,apps,Applications,cloud,,False,74
-.omniboard,True,.omniboard,.omniboard,oth,Other,projects,Omniboard project management tool,False,75
+item_name,is_folder,fs_item_name,fs_is_folder,tp_item_name,tp_is_folder,tp_cat_1,tp_cat_1_name,tp_cat_2,tp_comment,no_show,original_order
+._dotfiles,True,._dotfiles,True,._dotfiles,True,term,Terminal,dotfile mgmt,/Users/stevenbrown/._dotfiles/._dotfiles_srb_repo,False,0
+.zshrc,False,.zshrc,False,.zshrc,False,term,Terminal,zshrc,,False,1
+.ABCD_TEST123,False,nan,[NO FS ITEM],.ABCD_TEST123,False,term,Terminal,zshrc,,False,2
+.zsh_history,False,.zsh_history,False,.zsh_history,False,term,Terminal,zshrc,,False,3
+.zshrc_aliases,False,.zshrc_aliases,False,.zshrc_aliases,False,term,Terminal,zshrc,,False,4
+.zsh_history.bak,False,.zsh_history.bak,False,.zsh_history.bak,False,term,Terminal,zshrc,,False,5
+.zshrc_scripts,False,.zshrc_scripts,False,.zshrc_scripts,False,term,Terminal,zshrc,,False,6
+.zshrc_themes_omp,False,.zshrc_themes_omp,False,.zshrc_themes_omp,False,term,Terminal,zshrc,,False,7
+.zshrc_autocomplete1,False,.zshrc_autocomplete1,False,.zshrc_autocomplete1,False,term,Terminal,zshrc,,False,8
+.zprofile,False,.zprofile,False,.zprofile,False,term,Terminal,zsh other,zsh profile file,False,9
+.zcompdump-srb_mbp23-5.9,False,.zcompdump-srb_mbp23-5.9,False,.zcompdump-srb_mbp23-5.9,False,term,Terminal,zsh other,zsh completion dump file,False,10
+.zsh_sessions,True,.zsh_sessions,True,.zsh_sessions,True,term,Terminal,zsh other,Command history and state from previous zsh sessions,False,11
+.zcompdump,False,.zcompdump,False,.zcompdump,False,term,Terminal,zsh other,,False,12
+.zcompdump-srb_mbp23-5.9.zwc,False,.zcompdump-srb_mbp23-5.9.zwc,False,.zcompdump-srb_mbp23-5.9.zwc,False,term,Terminal,zsh other,,False,13
+.oh-my-posh,True,.oh-my-posh,True,.oh-my-posh,True,term,Terminal,zsh themes,,False,14
+.bashrc,False,.bashrc,False,.bashrc,False,term,Terminal,bash,,False,15
+.bash_history,False,.bash_history,False,.bash_history,False,term,Terminal,bash,,False,16
+.bash_sessions,True,.bash_sessions,True,.bash_sessions,True,term,Terminal,bash,Command history and state from previous bash sessions,False,17
+.sh_history,False,.sh_history,False,.sh_history,False,term,Terminal,bash,Shell history file,False,18
+.iterm2_shell_integration.zsh,False,.iterm2_shell_integration.zsh,False,.iterm2_shell_integration.zsh,False,term,Terminal,other,iTerm2 shell integration file,False,19
+.iterm2,True,.iterm2,True,.iterm2,True,term,Terminal,other,iTerm2 configuration files,False,20
+.viminfo,False,.viminfo,False,.viminfo,False,term,Terminal,other,,False,21
+.npm,True,.npm,True,.npm,True,swd,Software Development,package managers plus,Node.js package manager,False,22
+.npmrc,False,.npmrc,False,.npmrc,False,swd,Software Development,package managers plus,Node.js package manager configuration file,False,23
+.nvm,True,.nvm,True,.nvm,True,swd,Software Development,package managers plus,Node.js version manager,False,24
+.yarnrc,False,.yarnrc,False,.yarnrc,False,swd,Software Development,package managers plus,Yarn package manager,False,25
+.node-gyp,True,.node-gyp,True,.node-gyp,True,swd,Software Development,package managers plus,Node.js native addon build tool,False,26
+.docker,True,.docker,True,.docker,True,swd,Software Development,package managers plus,Docker containerization platform,False,27
+.gem,True,.gem,True,.gem,True,swd,Software Development,package managers plus,Ruby Gems (Ruby libraries and packages),False,28
+.vuerc,False,.vuerc,False,.vuerc,False,swd,Software Development,frameworks,Vue.js configuration file,False,29
+.vue-cli-ui,True,.vue-cli-ui,True,.vue-cli-ui,True,swd,Software Development,frameworks,Vue.js CLI User Interface config,False,30
+.nuxtrc,False,.nuxtrc,False,.nuxtrc,False,swd,Software Development,frameworks,Nuxt.js configuration file,False,31
+.python_history,False,.python_history,False,.python_history,False,swd,Software Development,python,,False,32
+.pyenv,True,.pyenv,True,.pyenv,True,swd,Software Development,python,Python version manager,False,33
+.ipython,True,.ipython,True,.ipython,True,swd,Software Development,python,Python interactive shell,False,34
+.pylint.d,True,.pylint.d,True,.pylint.d,True,swd,Software Development,python,Python linting tool,False,35
+.matplotlib,True,.matplotlib,True,.matplotlib,True,swd,Software Development,python,Python plotting library,False,36
+.streamlit,True,.streamlit,True,.streamlit,True,swd,Software Development,python,Python framework for creating interactive web apps,False,37
+.jupyter,True,.jupyter,True,.jupyter,True,swd,Software Development,python,Python interactive computing,False,38
+.vscode,True,.vscode,True,.vscode,True,swd,Software Development,microsoft,,False,39
+.vscode-react-native,True,.vscode-react-native,True,.vscode-react-native,True,swd,Software Development,microsoft,Visual Studio Code extension for React Native,False,40
+.dotnet,True,.dotnet,True,.dotnet,True,swd,Software Development,microsoft,.NET SDK,False,41
+.nuget,True,.nuget,True,.nuget,True,swd,Software Development,microsoft,.NET package manager,False,42
+.mono,True,.mono,True,.mono,True,swd,Software Development,microsoft,Mono runtime (cross-platform .NET),False,43
+.aspnet,True,.aspnet,True,.aspnet,True,swd,Software Development,microsoft,ASP.NET Core,False,44
+.ms_eclipsetemurinjdk_config,False,.ms_eclipsetemurinjdk_config,False,.ms_eclipsetemurinjdk_config,False,swd,Software Development,microsoft,Microsoft Eclipse Temurin JDK configuration file,False,45
+.ms_openjdk_config,False,.ms_openjdk_config,False,.ms_openjdk_config,False,swd,Software Development,microsoft,Microsoft OpenJDK configuration file,False,46
+.quokka,True,.quokka,True,.quokka,True,swd,Software Development,other,debugging tool for JavaScript & TypeScript,False,47
+.sonar,True,.sonar,True,.sonar,True,swd,Software Development,other,"SonarQube, a tool for continuous inspection of code quality",False,48
+.flowise,True,.flowise,True,.flowise,True,swd,Software Development,other,LLM AI No-code coding tool,False,49
+.installbuilder,True,.installbuilder,True,.installbuilder,True,swd,Software Development,other,dev tool for building cross-platform installers for dtop & server sw (🚫),False,50
+.android,True,.android,True,.android,True,swd,Software Development,other,Android SDK,False,51
+.degit,True,.degit,True,.degit,True,swd,Software Development,other,quickly scaffold projects by downloading/extracting a repo,False,52
+.gitignore_global,False,.gitignore_global,False,.gitignore_global,False,swd,Software Development,vcs git,Global .gitignore file,False,53
+.gitflow_export,False,.gitflow_export,False,.gitflow_export,False,swd,Software Development,vcs git,GitFlow configuration file,False,54
+.gitconfig,False,.gitconfig,False,.gitconfig,False,swd,Software Development,vcs git,Git configuration file,False,55
+.hgignore_global,False,.hgignore_global,False,.hgignore_global,False,swd,Software Development,vcs other,Global .hgignore file,False,56
+.subversion,True,.subversion,True,.subversion,True,swd,Software Development,vcs other,Subversion configuration files,False,57
+.config,True,.config,True,.config,True,sys,System,general,,False,58
+.cache,True,.cache,True,.cache,True,sys,System,general,,False,59
+.local,True,.local,True,.local,True,sys,System,general,,False,60
+.IdentityService,True,.IdentityService,True,.IdentityService,True,sys,System,macos,,False,61
+.DS_Store,False,.DS_Store,False,.DS_Store,False,sys,System,macos,,False,62
+.Trash,True,.Trash,True,.Trash,True,sys,System,macos,,False,63
+.CFUserTextEncoding,False,.CFUserTextEncoding,False,.CFUserTextEncoding,False,sys,System,macos,macOS - stores the user’s preferred text encoding settings,False,64
+.netrc,False,.netrc,False,.netrc,False,sys,System,unix,Unix file stores login & init info for connecting to remote systems,False,65
+.thumbnails,True,.thumbnails,True,.thumbnails,True,sys,System,unix,Thumbnail cache,False,66
+.ssh,True,.ssh,True,.ssh,True,sys,System,unix,Unix SSH configuration files,False,67
+.fontconfig,True,.fontconfig,True,.fontconfig,True,sys,System,unix,Unix font configuration,False,68
+.lesshst,False,.lesshst,False,.lesshst,False,sys,System,unix,command history file for the Unix less text viewer command,False,69
+.cups,True,.cups,True,.cups,True,sys,System,unix,Common Unix Printing System,False,70
+.Xencelabs,True,.Xencelabs,True,.Xencelabs,True,apps,Applications,regular,Xencelabs dedicated controller config,False,71
+.adobe,True,.adobe,True,.adobe,True,apps,Applications,regular,,False,72
+.dropbox,True,.dropbox,True,.dropbox,True,apps,Applications,cloud,,False,73
+.pcloud,True,.pcloud,True,.pcloud,True,apps,Applications,cloud,,False,74
+.omniboard,True,.omniboard,True,.omniboard,True,oth,Other,projects,Omniboard project management tool,False,75
