@@ -1,5 +1,10 @@
+import pandas as pd
 from dbase.dbase2_setup import setup_database
 from report_gen import export_dataframe_to_csv, export_to_markdown
+
+# Set Pandas display options for console output
+pd.set_option('display.max_columns', None)  # Show all columns
+pd.set_option('display.width', 1000)        # Set console width to prevent line wrapping
 
 def main():
     # Setup the database and get the dot items DataFrame

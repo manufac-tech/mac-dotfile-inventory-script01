@@ -34,8 +34,8 @@ def export_to_markdown(df, template_path, template_file, output_file):
         filtered_df = df[df['no_show'] == False]
 
         # Identify mismatches
-        fs_not_in_tp = filtered_df[(filtered_df['fs_item_name'].notnull()) & (filtered_df['tp_item_name'].isnull())]
-        tp_not_in_fs = filtered_df[(filtered_df['fs_item_name'].isnull()) & (filtered_df['tp_item_name'].notnull())]
+        fs_not_in_tp = filtered_df[(filtered_df['item_name'].notnull()) & (filtered_df['tp_item_name'].isnull())]
+        tp_not_in_fs = filtered_df[(filtered_df['item_name'].isnull()) & (filtered_df['tp_item_name'].notnull())]
 
         # Jinja2 setup
         env = Environment(

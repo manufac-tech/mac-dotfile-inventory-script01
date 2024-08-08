@@ -41,14 +41,20 @@ def setup_database(template_file_path):
     logging.debug("Loading dot items data frame.")
     dot_items_df = create_dot_items_dataframe()
 
+    logging.debug("Calculating id_start_tp for template unique IDs.")
+    id_max_fs = dot_items_df['fs_unique_id'].max()
+    id_start_tp = id_max_fs + 1
+
+    logging.debug(f"id_start_tp set to {id_start_tp}")
+
     logging.debug("Loading template data frame.")
-    template_df = load_template_csv_with_index(template_file_path)
+    template_df = load_template_csv_with_index(template_file_path, start_id=id_start_tp)
 
     # Define expected types for dot_items_df
     dot_items_expected_types = {
         "fs_item_name": object,
         "fs_is_folder": bool,
-        "unique_id": int
+        "fs_unique_id": int
     }
 
     # Define expected types for template_df
@@ -60,7 +66,8 @@ def setup_database(template_file_path):
         "tp_comment": object,
         "tp_cat_2": object,
         "no_show": bool,
-        "original_order": int
+        "original_order": int,
+        "tp_unique_id": int
     }
 
     logging.debug("Verifying data types in dot_items_df.")
@@ -74,7 +81,7 @@ def setup_database(template_file_path):
 
     logging.debug("Reordering columns.")
     reordered_columns = [
-        'item_name', 'is_folder', 'fs_item_name', 'fs_is_folder', 'unique_id',
+        'item_name', 'is_folder', 'fs_item_name', 'fs_is_folder', 'fs_unique_id',
         'tp_item_name', 'tp_is_folder', 'tp_cat_1', 'tp_cat_1_name', 'tp_cat_2', 
         'tp_comment', 'no_show', 'original_order'
     ]
@@ -88,4 +95,5 @@ def setup_database(template_file_path):
     logging.debug("Sorting merged data frame by original order.")
     merged_df.sort_values('original_order', inplace=True)
 
+    return merged_df
     return merged_df

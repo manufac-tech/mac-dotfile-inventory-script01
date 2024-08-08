@@ -55,23 +55,24 @@ def create_dot_items_dataframe():
     df['fs_is_folder'] = df['fs_is_folder'].astype(bool)
 
     # Assign sequential unique ID
-    df['unique_id'] = np.arange(1, len(df) + 1)
+    df['fs_unique_id'] = np.arange(1, len(df) + 1)
 
     # Log data type checks
     check_data_types(df, {
         "fs_item_name": 'object',
         "fs_is_folder": 'bool',
-        "unique_id": 'int64'
+        "fs_unique_id": 'int64'
     })
 
     return df
 
-def load_template_csv_with_index(template_file_path):
+def load_template_csv_with_index(template_file_path, start_id=None):
     """
     Load the CSV template into a staging DataFrame with index and prepare it.
 
     Args:
         template_file_path (str): Path to the template CSV file.
+        start_id (int, optional): The starting unique ID for unmatched template items.
 
     Returns:
         DataFrame: A DataFrame containing the template data with an original order index.
@@ -110,6 +111,12 @@ def load_template_csv_with_index(template_file_path):
             "no_show": 'bool',
             "original_order": 'int64'
         })
+
+        # Assign unique IDs to unmatched template items starting from start_id if provided
+        if start_id is not None:
+            template_df['tp_unique_id'] = np.arange(start_id, start_id + len(template_df))
+        else:
+            template_df['tp_unique_id'] = np.nan  # Ensure the column exists
 
         return template_df
     except Exception as e:
