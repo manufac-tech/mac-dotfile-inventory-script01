@@ -2,7 +2,7 @@ import pandas as pd
 from jinja2 import Environment, FileSystemLoader
 import os
 import regex as re
-from dbase.dbase4_merge_sup import replace_nan_values
+from dbase.dbase4_merge_sup import process_blanks
 
 def export_dataframe_to_csv(df, filename='output.csv', columns=None):
     """
@@ -14,8 +14,8 @@ def export_dataframe_to_csv(df, filename='output.csv', columns=None):
         columns (list): List of column names specifying the desired order.
     """
     try:
-        # Replace nan values with descriptive placeholders
-        df = replace_nan_values(df)
+        # Process blanks and edge cases
+        df = process_blanks(df)
 
         # Print the DataFrame to inspect before exporting
         print("DataFrame before exporting to CSV:\n", df.head())

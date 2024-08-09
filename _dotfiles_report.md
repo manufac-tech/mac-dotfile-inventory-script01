@@ -12,8 +12,6 @@
 
 - .zshrc
 
-- .ABCD_TEST123
-
 - .zsh_history
 
 - .zshrc_aliases

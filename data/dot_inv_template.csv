@@ -1,7 +1,6 @@
 tp_item_name,tp_is_folder,tp_cat_1,tp_cat_1_name,tp_comment,tp_cat_2,no_show
 ._dotfiles,true,term,Terminal,/Users/stevenbrown/._dotfiles/._dotfiles_srb_repo,dotfile mgmt,false
 .zshrc,false,term,Terminal,,zshrc,false
-.ABCD_TEST123,false,term,Terminal,,zshrc,false
 .zsh_history,false,term,Terminal,,zshrc,false
 .zshrc_aliases,false,term,Terminal,,zshrc,false
 .zsh_history.bak,false,term,Terminal,,zshrc,false

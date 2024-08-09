@@ -4,6 +4,7 @@
     "zz_outputs": true,
     "zz 240803-2258 py out": true,
     "venv": true,
-    ".gitignore": true
+    ".gitignore": true,
+    ".vscode": true
   }
 }
